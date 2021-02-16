@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
-public class Main {
+public class Practice1 {
 
     public static void main(String[] args) {
         final String[] input = {"my@protonmail.su", "a"};
