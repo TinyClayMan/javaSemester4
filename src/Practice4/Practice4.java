@@ -12,12 +12,14 @@ public class Practice4 {
 
         executor.submit(() -> System.out.println("Test"));
 
-        executor.shutdown(); //Disable new tasks from being submitted
+        // Disable new tasks from being submitted
+        executor.shutdown();
         executor.shutdownNow();
         try {
             // Wait a while for existing tasks to terminate
             if (!executor.awaitTermination(800, TimeUnit.MILLISECONDS)) {
-                executor.shutdownNow(); //cancel currently executing tasks
+                // Cancel currently executing tasks
+                executor.shutdownNow();
             }
         } catch (InterruptedException e) {
             executor.shutdownNow();
